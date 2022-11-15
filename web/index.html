@@ -9,6 +9,14 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -53,7 +61,9 @@
           <li><a class="nav-link scrollto" href="#services">Peticiones</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Ofrendas</a></li>
           <li><a class="nav-link scrollto" href="#team">Buscar ayuda</a></li>
-          <button class="btn btn-primary">Iniciar sesion</button>
+          <button style="width: 80%; " type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_is">
+            Iniciar sesion
+          </button>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -844,3 +854,93 @@
 </body>
 
 </html>
+
+
+
+                   <!-- Modal -->
+                   <div class="modal fade" id="modal_is" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ingrese a su cuenta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+
+
+                            <!--Formulario inicio de sesion-->
+    
+
+
+            <div class="container">
+                <div class="row">
+    
+            <form class="row g-3" method="POST" action="validacionPOST.php" id="formulario_modal">
+                <div class="col-6 position-relative">
+                    <label for="validationTooltip01" class="form-label"><img src="img/usuario.png" style="height: 20px; width: 20px;">  Usuario</label>
+                    <input type="text" class="form-control" value="" id="usuario">
+                  </div>
+                <div class="col-6 position-relative">
+                  <label for="validationTooltip01" class="form-label"><img src="img/contraseña.png" style="height: 20px; width: 20px;">Contraseña</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="cancelar_is" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" id="enviar_form" data-bs-dismiss="modal" class="btn btn-dark">Iniciar sesion</button>
+                        </div>
+</html>
+
+
+
+
+<script>
+$("#cancelar_is").click(function(){
+ $("#modal_is").modal('hide');
+});
+
+
+
+
+
+
+
+
+
+
+
+    //inicio de sesion AJAX
+
+    $("#enviar_form").click(function(){
+ iniciarsesion();
+});
+
+    function iniciarsesion(){
+var usuario=$('#usuario').val()
+var password=$('#password').val()
+
+
+$.ajax({
+    url: "inicio_s.php", //action
+    type: "POST", //method
+    data: { "usuario": usuario, "password": password},
+    dataType: "json",
+    success: function (respuesta){
+        if (respuesta==1){
+            location.href='index.php'
+        }
+        else{
+            if (respuesta==2){
+                location.href='index3.php'
+            }
+            else{
+                alert("usuario o contraseña incorrecto")
+            }
+        }
+    }
+    
+})}
+</script>
