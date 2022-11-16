@@ -61,7 +61,7 @@
           <li><a class="nav-link scrollto" href="#services">Peticiones</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Ofrendas</a></li>
           <li><a class="nav-link scrollto" href="#team">Buscar ayuda</a></li>
-          <button style="width: 80%; " type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_is">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_is">
             Iniciar sesion
           </button>
         </ul>
@@ -77,7 +77,9 @@
       <h1>Encuentra tu ayuda celestial</h1>
       <h2>Deseas encontrar el camino a la paz y gozo?</h2>
       <div class="d-flex">
-        <button class="btn btn-primary">Encontrar mi camino</button>
+        <button style="width: 80%; " type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_ed">
+          Encontrar mi camino
+        </button>      
       </div>
     </div>
   </section><!-- End Hero -->
@@ -423,7 +425,7 @@
             <div class="icon-box">
               <i class="bi bi-clock"></i>
               <h4><a href="#">Eiusmod Tempor</a></h4>
-              <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <p>Et harum quidem facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
             </div >
           </div>
         </div>
@@ -856,52 +858,96 @@
 </html>
 
 
-
-                   <!-- Modal -->
-                   <div class="modal fade" id="modal_is" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ingrese a su cuenta</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-
-
-                            <!--Formulario inicio de sesion-->
-    
-
-
-            <div class="container">
-                <div class="row">
-    
-            <form class="row g-3" method="POST" action="validacionPOST.php" id="formulario_modal">
-                <div class="col-6 position-relative">
-                    <label for="validationTooltip01" class="form-label"><img src="img/usuario.png" style="height: 20px; width: 20px;">  Usuario</label>
-                    <input type="text" class="form-control" value="" id="usuario">
-                  </div>
-                <div class="col-6 position-relative">
-                  <label for="validationTooltip01" class="form-label"><img src="img/contraseña.png" style="height: 20px; width: 20px;">Contraseña</label>
-                  <input type="password" class="form-control" id="password">
+    <!-- Modal -->
+    <div class="modal" id="modal_ed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Por favor responda las siguientes preguntas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="container">
+                <p>Seleccione con lo que tiene mayor conexion</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Estrellas
+                  </label>
                 </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" id="cancelar_is" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" id="enviar_form" data-bs-dismiss="modal" class="btn btn-dark">Iniciar sesion</button>
-                        </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Naturaleza
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Lectura
+                  </label>
+                </div>                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Fiestas
+                  </label>
+                </div>
+              </div>
+          </div>
+      <div class="modal-footer">
+          <button type="button" id="cancelar_ed" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" id="enviar_form2" data-bs-dismiss="modal" class="btn btn-primary">Siguiente</button>
+      </div>
+      </div>
+     </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_is" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ingrese a su cuenta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+    <!--Formulario inicio de sesion-->
+      <div class="container">
+          <div class="row">
+
+      <form class="row g-3" method="POST" action="validacionPOST.php" id="formulario_modal">
+          <div class="col-6 position-relative">
+              <label for="validationTooltip01" class="form-label"><img src="img/usuario.png" style="height: 20px; width: 20px;">  Usuario</label>
+              <input type="text" class="form-control" value="" id="usuario">
+            </div>
+          <div class="col-6 position-relative">
+            <label for="validationTooltip01" class="form-label"><img src="img/contraseña.png" style="height: 20px; width: 20px;">Contraseña</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" id="cancelar_is" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" id="enviar_form" data-bs-dismiss="modal" class="btn btn-dark">Iniciar sesion</button>
+
 </html>
 
 
 
 
 <script>
-$("#cancelar_is").click(function(){
- $("#modal_is").modal('hide');
-});
+    $("#cancelar_is").click(function(){
+    $("#modal_is").modal('hide');
+    });
 
+    $("#cancelar_ed").click(function(){
+    $("#modal_ed").modal('hide');
+    });
 
 
 
@@ -915,32 +961,86 @@ $("#cancelar_is").click(function(){
     //inicio de sesion AJAX
 
     $("#enviar_form").click(function(){
- iniciarsesion();
-});
+    iniciarsesion();
+    });
 
-    function iniciarsesion(){
-var usuario=$('#usuario').val()
-var password=$('#password').val()
+        function iniciarsesion(){
+    var usuario=$('#usuario').val()
+    var password=$('#password').val()
 
 
-$.ajax({
-    url: "inicio_s.php", //action
-    type: "POST", //method
-    data: { "usuario": usuario, "password": password},
-    dataType: "json",
-    success: function (respuesta){
-        if (respuesta==1){
-            location.href='index.php'
-        }
-        else{
-            if (respuesta==2){
-                location.href='index3.php'
+    $.ajax({
+        url: "inicio_s.php", //action
+        type: "POST", //method
+        data: { "usuario": usuario, "password": password},
+        dataType: "json",
+        success: function (respuesta){
+            if (respuesta==1){
+                location.href='index.php'
             }
             else{
-                alert("usuario o contraseña incorrecto")
+                if (respuesta==2){
+                    location.href='index3.php'
+                }
+                else{
+                    alert("usuario o contraseña incorrecto")
+                }
             }
         }
+        
+    })}
+
+
+
+
+
+
+
+
+
+
+    function cargarPreguntas()
+    {   
+        $("#tabla1").empty()
+        var letra = $("#letra").val()
+        if (letra != ""){
+            $.ajax({
+            url: "BackendEventos.php", //action
+            type: "POST", //method
+            data: {"letra": letra },
+            //dataType: "json",
+            success: function(respuesta){
+                
+                var box = JSON.parse(respuesta)
+                console.log("tablaEventos:",box)
+
+                $.each(box, function(key, value){
+                    //console.log("Respuesta: " + respuesta)
+                    console.log("Key: " , key)
+                    console.log("Value: " , value)
+
+                    $("#tabla1").append("<tr id='fila"+key+"'  >"+
+                    "<td class='tablaEventos'>"+value.id_evento+"</td>"+
+                    "<td class='tablaEventos'>"+value.id_museo+"</td>"+
+                    "<td class='tablaEventos'>"+value.id_sala+"</td>"+
+                    "<td class='tablaEventos'>"+value.fecha+"</td>"+
+                    "<td class='tablaEventos'>"+value.titulo+"</td>"+
+                    "<td class='tablaEventos'>"+value.descripcion+"</td>"+
+                    "<td class='tablaEventos'>"+"<select class='form-control altura' id='letra_tabla"+key+"'><option class='form-control altura' value='0'>Seleccione</option><option class='form-control altura' value='e'>En curso</option><option class='form-control altura' value='p'>Proximo</option><option class='form-control altura' value='c'>Cumplido</option><option class='form-control altura' value='s'>Suspendido</option></select></td>"+
+                    "</tr>")
+                    
+                    $("#letra_tabla"+key+"").val(value.estado)
+                    key = key + 1
+                    
+                })
+                
+            }
+            
+        })
+        }
+        
     }
     
-})}
+
+
 </script>
