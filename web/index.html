@@ -869,26 +869,26 @@
           <div class="modal-body">
               <div class="container">
                 <p>Seleccione con lo que tiene mayor conexion</p>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
+                <div class="form-check" id="formulario_religion">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="op1">
+                  <label id="textoOp1" class="form-check-label" for="op1">
                     Estrellas
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="op2" checked>
+                  <label id="textoOp2" class="form-check-label" for="op2">
                     Naturaleza
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="op3">
+                  <label id="textoOp3" class="form-check-label" for="op3">
                     Lectura
                   </label>
                 </div>                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="op4">
+                  <label id="textoOp4" class="form-check-label" for="op4">
                     Fiestas
                   </label>
                 </div>
@@ -896,7 +896,8 @@
           </div>
       <div class="modal-footer">
           <button type="button" id="cancelar_ed" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" id="enviar_form2" data-bs-dismiss="modal" class="btn btn-primary">Siguiente</button>
+          <button type="button" id="btn_anterior" class="btn btn-danger">Anterior</button>
+          <button type="button" id="btn_siguiente" data-bs-dismiss="modal" class="btn btn-primary">Siguiente</button>
       </div>
       </div>
      </div>
@@ -1040,7 +1041,32 @@
         }
         
     }
-    
+
+    //Funciones relacionadas a la seleccion de religiones
+
+    var cristianismo
+    var hinduismo
+    var astrologia
+    var misticismo
+    var opcion
+
+
+
+    function Opcion(){
+      opcion 
+    }
+
+    function Religion(){
+      var opcion = 1
+      $('#TituloForm').html(value,"gema");
+      $('#textoOp1').html(value,"a");
+      $('#textoOp2').html(value,"a");
+      $('#textoOp3').html(value,"a");
+      $('#textoOp4').html(value,"a");
+    }
+
+
+
 
 
 </script>
