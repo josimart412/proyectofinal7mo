@@ -77,7 +77,7 @@
       <h1>Encuentra tu ayuda celestial</h1>
       <h2>Deseas encontrar el camino a la paz y gozo?</h2>
       <div class="d-flex">
-        <button style="width: 80%; " type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_ed">
+        <button style="width: 80%; " id="btn_ed" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_ed">
           Encontrar mi camino
         </button>      
       </div>
@@ -948,6 +948,7 @@
 
     $("#cancelar_ed").click(function(){
     $("#modal_ed").modal('hide');
+    $("#btn_anterior").css('display', 'block');
     });
 
 
@@ -1048,16 +1049,34 @@
     var hinduismo
     var astrologia
     var misticismo
-    var opcion
+    var opcion=1
 
 
 
-    function Opcion(){
-      opcion 
-    }
+    $("#btn_ed").click(function(){
+      var opcion=1;
+      $("#btn_anterior").hide();
+      })
+
+
+    $("#btn_siguiente").click(function(){
+      var opcion=opcion+1;
+      if (opcion==1) {
+        $("#btn_anterior").hide();
+      }
+      $("#btn_anterior").show();
+      alert (opcion)
+    })
+    
+
+    $("#btn_anterior").click(function(){
+      var opcion=opcion-1;
+      if (opcion==1) {
+        $("#btn_anterior").hide();
+      }
+    })
 
     function Religion(){
-      var opcion = 1
       $('#TituloForm').html(value,"gema");
       $('#textoOp1').html(value,"a");
       $('#textoOp2').html(value,"a");
