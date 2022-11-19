@@ -1051,6 +1051,16 @@
     var misticismo=0;
     var opcion=1;
     var ultimaseleccion;
+    var seleccion1
+    var seleccion2
+    var seleccion3
+    var seleccion4
+    var seleccion5
+    var seleccion6
+    var seleccion7
+    var seleccion8
+    var seleccion9
+    var seleccion10
   
 
 
@@ -1061,6 +1071,7 @@
       $("#btn_anterior").hide();
       })
 
+    //Funciones relacionadas al boton siguiente
 
     $("#btn_siguiente").click(function(){
       opcion=opcion+1;
@@ -1198,9 +1209,40 @@
       alert (misticismo)
       ultimaseleccion=4
     }
+
+    //funcion que asigna a una variable que respuesta se selecciono en cada opcion
+
+    if(opcion==2){
+      seleccion1=ultimaseleccion
+    }
+    else if (opcion==3) {
+      seleccion2=ultimaseleccion
+    }
+    else if (opcion==4) {
+      seleccion3=ultimaseleccion
+    }
+    else if (opcion==5) {
+      seleccion4=ultimaseleccion
+    }
+    else if (opcion==6) {
+      seleccion5=ultimaseleccion
+    }
+    else if (opcion==7) {
+      seleccion6=ultimaseleccion
+    }
+    else if (opcion==8) {
+      seleccion7=ultimaseleccion
+    }
+    else if (opcion==9) {
+      seleccion8=ultimaseleccion
+    }
+    else if (opcion==10) {
+      seleccion9=ultimaseleccion
+    }
     })
     
     
+    //funciones relacionadas al boton anterior 
 
     $("#btn_anterior").click(function(){
       opcion=opcion-1;
@@ -1317,32 +1359,187 @@
         $("#textoOp4").append("9");
     }
 
-
-    if (d) {
-      
+    //funcion para quitar puntaje a religion determinada (siguiendo en funciones relacionadas al boton anterior)
+    if(opcion==1){
+          if (seleccion1==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion1==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion1==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion1==4) {
+            misticismo--
+            alert(misticismo)
+          }
     }
-
-
-    if (ultimaseleccion==1) {
-      cristianismo--
-      alert (cristianismo)
+    else if (opcion==2) {
+          if (seleccion2==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion2==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion2==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion2==4) {
+            misticismo--
+            alert(misticismo)
+          }
     }
-    else if (ultimaseleccion==2) {
-      hinduismo--
-      alert (hinduismo)
+    else if (opcion==3) {
+          if (seleccion3==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion3==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion3==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion3==4) {
+            misticismo--
+            alert(misticismo)
+          }
     }
-    else if (ultimaseleccion==3) {
-      astrologia--
-      alert (astrologia)
+    else if (opcion==4) {
+          if (seleccion4==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion4==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion4==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion4==4) {
+            misticismo--
+            alert(misticismo)
+          }
     }
-    else if (ultimaseleccion==1) {
-      misticismo--
-      alert (misticismo)
+    else if (opcion==5) {
+          if (seleccion5==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion5==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion5==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion5==4) {
+            misticismo--
+            alert(misticismo)
+          }
     }
-    })
-    
-    $("#btn_siguiente").click(function(){
-      
+    else if (opcion==6) {
+          if (seleccion6==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion6==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion6==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion6==4) {
+            misticismo--
+            alert(misticismo)
+          }
+    }
+    else if (opcion==7) {
+          if (seleccion7==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion7==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion7==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion7==4) {
+            misticismo--
+            alert(misticismo)
+          }
+    }
+    else if (opcion==8) {
+          if (seleccion8==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion8==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion8==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion8==4) {
+            misticismo--
+            alert(misticismo)
+          }
+    }
+    else if (opcion==9) {
+          if (seleccion9==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion9==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion9==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion9==4) {
+            misticismo--
+            alert(misticismo)
+          }
+    }
+    else if (opcion==10) {
+          if (seleccion10==1) {
+            cristianismo--
+            alert (cristianismo)
+          }
+          else if (seleccion10==2) {
+            hinduismo--
+            alert(hinduismo)
+          }
+          else if (seleccion10==3) {
+            astrologia--
+            alert(astrologia)
+          }
+          else if (seleccion10==4) {
+            misticismo--
+            alert(misticismo)
+          }
+    }
     })
 
 
