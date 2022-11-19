@@ -868,7 +868,7 @@
           </div>
           <div class="modal-body">
               <div class="container">
-                <p>Seleccione con lo que tiene mayor conexion</p>
+                <p id="TituloForm">Seleccione con lo que tiene mayor conexion</p>
                 <div class="form-check" id="formulario_religion">
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="op1">
                   <label id="textoOp1" class="form-check-label" for="op1">
@@ -1045,11 +1045,14 @@
 
     //Funciones relacionadas a la seleccion de religiones
 
-    var cristianismo
-    var hinduismo
-    var astrologia
-    var misticismo
-    var opcion=1
+    var cristianismo=0;
+    var hinduismo=0;
+    var astrologia=0;
+    var misticismo=0;
+    var opcion=1;
+    var ultimaseleccion;
+  
+
 
 
 
@@ -1060,31 +1063,287 @@
 
 
     $("#btn_siguiente").click(function(){
-      var opcion=opcion+1;
-      if (opcion==1) {
+      opcion=opcion+1;
+      if (opcion==1){
         $("#btn_anterior").hide();
       }
       $("#btn_anterior").show();
-      alert (opcion)
+
+      if (opcion==2) {
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 2");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("2");
+      }
+      else if (opcion==3){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 3");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("3");
+    }
+      else if (opcion==4){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 4");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("4");
+    }
+    else if (opcion==5){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 5");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("5");
+    }
+    else if (opcion==6){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 6");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("6");
+    }
+    else if (opcion==7){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 7");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("7");
+    }
+    else if (opcion==8){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 8");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("8");
+    }
+    else if (opcion==9){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 9");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("9");
+    }
+    else if (opcion==10){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 10");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("10");
+    }
+
+    if ($("#op1").is(':checked')) {
+      cristianismo++
+      alert (cristianismo)
+      ultimaseleccion=1
+    }
+    else if ($("#op2").is(':checked')) {
+      hinduismo++
+      alert (hinduismo)
+      ultimaseleccion=2
+    }
+    else if ($("#op3").is(':checked')) {
+      astrologia++
+      alert (astrologia)
+      ultimaseleccion=3
+    }
+    else if ($("#op4").is(':checked')) {
+      misticismo++
+      alert (misticismo)
+      ultimaseleccion=4
+    }
     })
+    
     
 
     $("#btn_anterior").click(function(){
-      var opcion=opcion-1;
-      if (opcion==1) {
+      opcion=opcion-1;
+      if (opcion==1){
         $("#btn_anterior").hide();
       }
-    })
 
-    function Religion(){
-      $('#TituloForm').html(value,"gema");
-      $('#textoOp1').html(value,"a");
-      $('#textoOp2').html(value,"a");
-      $('#textoOp3').html(value,"a");
-      $('#textoOp4').html(value,"a");
+      if (opcion==1) {
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 1");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("1");
+      }
+      else if (opcion==2){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 2");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("2");
+    }
+    else if (opcion==3){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 3");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("3");
+    }
+    else if (opcion==4){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 4");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("4");
+    }
+    else if (opcion==5){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 5");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("5");
+    }
+    else if (opcion==6){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 6");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("6");
+    }
+    else if (opcion==7){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 7");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("7");
+    }
+    else if (opcion==8){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 8");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("8");
+    }
+    else if (opcion==9){
+        $("#TituloForm").empty();
+        $("#TituloForm").append("Agregar respuesta 9");
+        $("#textoOp1").empty();
+        $("#textoOp1").append("estas");
+        $("#textoOp2").empty();
+        $("#textoOp2").append("en la");
+        $("#textoOp3").empty();
+        $("#textoOp3").append("opcion");
+        $("#textoOp4").empty();
+        $("#textoOp4").append("9");
     }
 
 
+    if (d) {
+      
+    }
+
+
+    if (ultimaseleccion==1) {
+      cristianismo--
+      alert (cristianismo)
+    }
+    else if (ultimaseleccion==2) {
+      hinduismo--
+      alert (hinduismo)
+    }
+    else if (ultimaseleccion==3) {
+      astrologia--
+      alert (astrologia)
+    }
+    else if (ultimaseleccion==1) {
+      misticismo--
+      alert (misticismo)
+    }
+    })
+    
+    $("#btn_siguiente").click(function(){
+      
+    })
 
 
 
