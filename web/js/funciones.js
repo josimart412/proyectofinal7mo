@@ -96,7 +96,7 @@
     var seleccion8
     var seleccion9
     var seleccion10
-  
+
 
 
 
@@ -115,6 +115,12 @@
       $("#textoOp3").append("No, no hay un ser divino");
       $("#textoOp4").empty();
       $("#textoOp4").append("Creo que hay algo, pero no se que");
+      $("#op1").prop("checked", false);
+      $("#op2").prop("checked", false);
+      $("#op3").prop("checked", false);
+      $("#op4").prop("checked", false);
+  
+      $("#btn_siguiente").attr('disabled', true);
       })
 
     //Funciones relacionadas al boton siguiente
@@ -249,7 +255,6 @@
     }
     else if ($("#op3").is(':checked')) {
       astrologia++
-      alert (astrologia)
       ultimaseleccion=3
     }
     else if ($("#op4").is(':checked')) {
@@ -286,6 +291,14 @@
     else if (opcion==10) {
       seleccion9=ultimaseleccion
     }
+
+    $("#op1").prop("checked", false);
+    $("#op2").prop("checked", false);
+    $("#op3").prop("checked", false);
+    $("#op4").prop("checked", false);
+
+    $("#btn_siguiente").attr('disabled', true);
+    $("#btn_finalizar").attr('disabled', true);
     })
     
     
@@ -490,7 +503,6 @@
           }
           else if (seleccion6==3) {
             astrologia--
-            alert(astrologia)
           }
           else if (seleccion6==4) {
             misticismo--
@@ -552,6 +564,14 @@
             misticismo--
           }
     }
+
+    $("#op1").prop("checked", false);
+    $("#op2").prop("checked", false);
+    $("#op3").prop("checked", false);
+    $("#op4").prop("checked", false);
+
+    $("#btn_siguiente").attr('disabled', true);
+    $("#btn_finalizar").attr('disabled', true);
     })
 
     //Funciones relacionadas al boton finalizar encuesta
@@ -577,4 +597,41 @@
         alert ("cristiano:"+cristianismo+" hinduismo:"+hinduismo+" astrologia:"+astrologia+" misticismo: "+misticismo)
         ultimaseleccion=4
       }
+      var religionresultado = {
+        cristianismo : cristianismo,
+        hinduismo : hinduismo,
+        astrologia : astrologia,
+        misticismo : misticismo
+      }
+      
+      var maxKey = Object.keys(religionresultado).sort(function (a, b) {
+        return religionresultado[a] < religionresultado[b];
+      })[0];
+
+      var result = {};
+      result[maxKey] = religionresultado[maxKey];
+      console.log(result);
+      
+
+
     })
+
+    //Funcion que activa el boton siguiente y finalizar solo si se selecciona un radio
+
+    $("#op1").click(function(){
+      $("#btn_siguiente").attr('disabled', false);
+      $("#btn_finalizar").attr('disabled', false);
+    })
+    $("#op2").click(function(){
+      $("#btn_siguiente").attr('disabled', false);
+      $("#btn_finalizar").attr('disabled', false);
+    })
+    $("#op3").click(function(){
+      $("#btn_siguiente").attr('disabled', false);
+      $("#btn_finalizar").attr('disabled', false);
+    })
+    $("#op4").click(function(){
+      $("#btn_siguiente").attr('disabled', false);
+      $("#btn_finalizar").attr('disabled', false);
+    })
+
