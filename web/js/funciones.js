@@ -96,6 +96,8 @@
     var seleccion8
     var seleccion9
     var seleccion10
+    var religionseleccionada=[cristianismo, hinduismo, astrologia, misticismo]
+    
 
 
 
@@ -597,21 +599,22 @@
         alert ("cristiano:"+cristianismo+" hinduismo:"+hinduismo+" astrologia:"+astrologia+" misticismo: "+misticismo)
         ultimaseleccion=4
       }
-      var religionresultado = {
-        cristianismo : cristianismo,
-        hinduismo : hinduismo,
-        astrologia : astrologia,
-        misticismo : misticismo
-      }
-      
-      var maxKey = Object.keys(religionresultado).sort(function (a, b) {
-        return religionresultado[a] < religionresultado[b];
-      })[0];
 
-      var result = {};
-      result[maxKey] = religionresultado[maxKey];
-      console.log(result);
-      
+      if (cristianismo>hinduismo,astrologia,misticismo) {
+        religionseleccionada=1
+      }
+      else if (hinduismo>cristianismo,astrologia,misticismo) {
+        religionseleccionada=2
+      }
+      else if (astrologia>cristianismo,hinduismo,misticismo) {
+        religionseleccionada=3
+      }
+      else if (misticismo>cristianismo,hinduismo,astrologia) {
+        religionseleccionada=4
+      }
+
+      console.log (religionseleccionada[2])
+
 
 
     })
