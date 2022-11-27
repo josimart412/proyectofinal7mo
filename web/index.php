@@ -11,8 +11,51 @@ if (!isset($_SESSION['usuario'])){
 }
 else
 {
+  $usuario = ($_SESSION['usuario']);
+  $r = "select `id_usuario`, `nombre_completo`, `tipo_usuario`, `id_religion` from `usuarios` WHERE usuario='".$usuario."'";
+  $q = mysqli_query($con, $r);
+  $d = mysqli_fetch_array($q);
+  
+  $id_usuario= $d['id_usuario'];
+  $nombre_completo = $d['nombre_completo'];
+  $tipo_usuario = $d['tipo_usuario'];
+  $id_religion = $d['id_religion'];
+  
+  $r2 = "select `religion`, `descripcion` from `religiones` WHERE id_religion='".$id_religion."'";
+  $q2 = mysqli_query($con, $r2);
+  $d2 = mysqli_fetch_array($q2);
+  $religion = $d2['religion'];
+  $descripcion = $d2['descripcion'];
 
-    
+  echo "
+  
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=' crossorigin='anonymous'></script>
+
+  <script>
+
+  var id_usuario = '".$id_usuario."';
+
+  var tipo_usuario = '".$tipo_usuario."';
+
+  var id_religion = '".$id_religion."';
+
+  var nombre_completo = '".$nombre_completo."';
+
+  var religion = '".$religion."';
+
+  var descripcion = '".$descripcion."';
+
+
+  function cambiarnombre(){
+    $('#titulo').val('".$religion."');
+  }
+
+  $(document).ready(function() {
+        permisos();
+    });
+
+
+  </script>";
 }
 
 ?>
@@ -86,8 +129,8 @@ else
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
-      <h1>Titulo</h1>
-      <h2>Descripcion</h2>
+      <h1 id="titulo">Titulo</h1>
+      <h2 id="descripcion">Descripcion</h2>
       <div class="d-flex">
      
       </div>

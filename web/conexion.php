@@ -3,7 +3,7 @@
 	$dbip= "localhost";
 	$dbuser = "root";
 	$dbpass = "";
-	$dbname = "museo";
+	$dbname = "santuario";
 	//Conexion
 	$con = mysqli_connect($dbip, $dbuser, $dbpass, $dbname);
 	if(mysqli_connect_errno()){
