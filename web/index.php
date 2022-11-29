@@ -93,6 +93,13 @@ else
     $('#mensajes').html('".$mensajes."');
     $('#video').prop('href','$video');
 
+    
+    if (tipo_usuario=='u') {
+      $('#admin-panel').hide();
+    }
+    else{
+      $('#admin-panel').show();
+    }
   }
 
   $(document).ready(function() {
@@ -161,9 +168,17 @@ else
           <li><a class="nav-link scrollto" href="#services">Peticiones</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Ofrendas</a></li>
           <li><a class="nav-link scrollto" href="#team">Buscar ayuda</a></li>
-          <?php
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php
             print "<li class='nav-item'><img src='img/usuario.png' style='height: 20px; width: 20px;'>$_SESSION[usuario]</li>"
           ?>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item"  href="cerrar_s.php">Cerrar sesion</a>
+            </div>
+        </div>
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -519,6 +534,169 @@ else
 
 </html>
 
+
+
+
+
+<!-- MODAL EDITAR RELIGIONES-->
+
+
+<div class="modal fade" id="modal_E" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Datos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <div class="container">
+                <div class="row">
+                <div class="col">
+                <form id="formEV">                                      
+                                            <label for="texto de ejemplo" class="form-label">ID Religion</label>
+                                            <input name="id_religion_e" type="text" id="id_religion_e" placeholder="" class="form-control">        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">                                        
+                                            <label for="texto de ejemplo" class="form-label">Religion</label>
+                                            <select id="religion_e" name="religion_e" class="form-control" aria-label="Default select example">
+                                                <option selected>Seleccionar</option>
+                                                <option value="Cristianismo">Cristianismo</option>
+                                                <option value="hinduismo">Hinduismo</option>
+                                                <option value="astrologia">Astrologia</option>
+                                                <option value="misticismo">Misticismo</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-6">                                        
+                                            <label for="texto de ejemplo" class="form-label">Video</label>
+                                            <input name="video_e" type="text" id="video_e" placeholder="" class="form-control">        
+                                        </div>
+                                        <div class="col-12">                                        
+                                            <label for="texto de ejemplo" class="form-label">Descripcion</label>
+                                            <input name="descripcion_e" type="text" id="descripcion_e" placeholder="" class="form-control">        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">                                        
+                                            <label for="texto de ejemplo" class="form-label">Mision</label>
+                                            <input name="mision_e" type="text" id="mision_e" placeholder="" class="form-control">        
+                                        </div>
+                                        <div class="col-12">                                        
+                                            <label for="texto de ejemplo" class="form-label">Plan</label>
+                                            <input name="plan_e" type="text" id="plan_e" placeholder="" class="form-control">
+                                        </div>
+                                        <div class="col-12">                                        
+                                            <label for="texto de ejemplo" class="form-label">Vision</label>
+                                            <input name="vision_e" type="text" id="vision_e" placeholder="" class="form-control">
+                                        </div>
+                                </div>
+                                </form>  
+                                <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger"  data-dismiss="modal">Cancelar</button>
+                                <button id="editData2" type="button" class="btn btn-primary xd" >enviar</button>
+                            </div> 
+                                </div>
+                                </div>  
+                </div>
+                
+                
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+<!-- MODAL EDITAR Y BORRAR USUARIOS-->
+
+
+<div class="modal fade" id="modal_EB" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Datos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <div class="container">
+                <div class="row">
+                <div class="col">
+                <form id="formAV">                                      
+                                            <label for="texto de ejemplo" class="form-label">ID Usuario</label>
+                                            <input name="id_usuario_av" type="text" id="id_usuario_av" placeholder="" class="form-control">        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">                                        
+                                            <label for="texto de ejemplo" class="form-label">Usuario</label>
+                                            <input name="usuario_av" type="text" id="usuario_av" placeholder="" class="form-control">        
+                                        </div>
+                                        <div class="col-6">                                        
+                                            <label for="texto de ejemplo" class="form-label">Nombre</label>
+                                            <input name="nombre_completo_av" type="text" id="nombre_completo_av" placeholder="" class="form-control">        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">                                        
+                                            <label for="texto de ejemplo" class="form-label">Email</label>
+                                            <input name="email_av" type="text" id="email_av" placeholder="" class="form-control">        
+                                        </div>
+                                        <div class="col-6">                                        
+                                            <label for="texto de ejemplo" class="form-label">Religion</label>
+                                            <select id="religion_av" name="religion_av" class="form-control" aria-label="Default select example">
+                                                <option value="1">Cristianismo</option>
+                                                <option value="2">Hinduismo</option>
+                                                <option value="3">Astrologia</option>
+                                                <option value="4">Misticismo</option>
+                                              </select>                                        </div>
+                                    </div>
+                                        <div class="col-6">                                        
+                                            <label for="texto de ejemplo" class="form-label">Tipo de usuario</label>
+                                            <select id="tipo_usuario_av" name="tipo_usuario_av" class="form-control" aria-label="Default select example">
+                                                <option selected>Seleccionar</option>
+                                                <option value="a">administador</option>
+                                                <option value="u">Usuario</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>  
+                                <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button id="closeModalAV2" type="button" class="btn btn-danger"  data-dismiss="modal">Cancelar</button>
+                                <button id="editData" type="button" class="btn btn-primary xd" >enviar</button>
+                                <button id="deleteData" type="button" class="btn btn-danger xd" >eliminar</button>
+                            </div> 
+                                </div>
+                                </div>  
+                </div>
+                
+                
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- MODAL RELIGIONES -->
 
 
@@ -544,7 +722,6 @@ else
                                 <th class='tablaReligiones'>Vision</th>
                                 <th class='tablaReligiones'>Video</th>
                                 <th class='tablaReligiones'>Editar</th>
-                                <th class='tablaReligiones'>Borrar</th>
                             </tr>
                         </thead>
                         <tbody  id="tablaReligiones">

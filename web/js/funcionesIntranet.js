@@ -33,9 +33,19 @@
                     "<td class='tablaUsuarios'>"+value.nombre_completo+"</td>"+ 
                     "<td class='tablaUsuarios'>"+"<select disabled class='form-control altura' id='religion_form"+key+"'><option class='form-control altura' value='0'>Seleccione</option><option class='form-control altura' value='1'>Cristianismo</option><option class='form-control altura' value='2'>Hinduismo</option><option class='form-control altura' value='3'>Astrologia</option><option class='form-control altura' value='4'>Misticismo</option></select></td>"+
                     "<td class='tablaUsuarios'>"+value.email+"</td>"+
-                    "<td class='xd'>"+"<button class='btn btn-sm btn-info text-center'  id='edit"+key+"' data-toggle='modal' data-target='#modal_EB'>"+"<img class='iconsize xd' src='img/editar.png'>"+"</button>"+"</td>"+
-                    "<td class='xd'>"+"<button class='btn btn-sm btn-danger text-center'  id='delete"+key+"' data-toggle='modal' data-target='#modal_EB'>"+"<img class='iconsize xd' src='img/tacho.png'>"+"</td>"+
+                    "<td class='xd'>"+"<button class='btn btn-sm btn-info text-center'  id='edit"+key+"' data-dismiss='modal' data-toggle='modal' data-target='#modal_EB'>"+"<img class='iconsize xd' src='img/editar.png'>"+"</button>"+"</td>"+
+                    "<td class='xd'>"+"<button class='btn btn-sm btn-danger text-center'  id='delete"+key+"' data-dismiss='modal' data-toggle='modal' data-target='#modal_EB'>"+"<img class='iconsize xd' src='img/tacho.png'>"+"</td>"+
                     "</tr>")
+
+                    $("#edit"+key).on("click", function(){
+                        console.log(value)
+                        cargarFormEdit(value)
+                    })
+
+                    $("#delete"+key).on("click", function(){
+                        console.log(value)
+                        cargarFormDelete(value)
+                    })
                     
                     $("#tipo_usuario"+key+"").val(value.tipo_usuario)
                     $("#religion_form"+key+"").val(value.id_religion)
@@ -81,10 +91,14 @@
                           "<td class='tablaReligiones'>"+value.plan+"</td>"+
                           "<td class='tablaReligiones'>"+value.vision+"</td>"+
                           "<td class='tablaReligiones'>"+value.video+"</td>"+
-                          "<td class='xd'>"+"<button class='btn btn-sm btn-info text-center'  id='edit"+key+"' data-toggle='modal' data-target='#modal_EB'>"+"<img class='iconsize xd' src='img/editar.png'>"+"</button>"+"</td>"+
-                          "<td class='xd'>"+"<button class='btn btn-sm btn-danger text-center'  id='delete"+key+"' data-toggle='modal' data-target='#modal_EB'>"+"<img class='iconsize xd' src='img/tacho.png'>"+"</td>"+
+                          "<td class='xd'>"+"<button class='btn btn-sm btn-info text-center'  id='edit2"+key+"' data-dismiss='modal' data-toggle='modal' data-target='#modal_E'>"+"<img class='iconsize xd' src='img/editar.png'>"+"</button>"+"</td>"+
                           "</tr>")
                           
+                          $("#edit2"+key).on("click", function(){
+                            console.log(value)
+                            cargarFormEdit2(value)
+                        })
+
                           $("#tipo_usuario"+key+"").val(value.tipo_usuario)
                           $("#religion_form"+key+"").val(value.id_religion)
                           key = key + 1
@@ -149,3 +163,204 @@
             }
         })
     })
+
+
+
+
+
+
+    function cargarFormDelete(value)
+    {
+        $("#deleteData").show()
+        $("#editData").hide()
+                    
+
+        console.log("value: ", value)
+
+        $("#id_usuario_av").val(value.id_usuario)
+        $("#id_usuario_av").attr('placeholder', value.id_usuario) 
+        $("#id_usuario_av").attr('readonly', true)
+        
+        $("#usuario_av").val(value.usuario)
+        $("#usuario_av").attr('placeholder', value.usuario)
+        $("#usuario_av").attr('readonly', true)
+        
+        $("#nombre_completo_av").val(value.nombre_completo)
+        $("#nombre_completo_av").attr('placeholder', value.nombre_completo) 
+        $("#nombre_completo_av").attr('readonly', true)
+        
+        $("#email_av").val(value.email)
+        $("#email_av").attr('placeholder', value.email) 
+        $("#email_av").attr('readonly', true)
+        
+        $("#religion_av").val(value.id_religion)
+        $("#religion_av").attr('placeholder', value.id_religion) 
+        $("#religion_av").attr('disabled', true)
+
+        $("#tipo_usuario_av").val(value.tipo_usuario)
+        $("#tipo_usuario_av").attr('placeholder', value.tipo_usuario) 
+        $("#tipo_usuario_av").attr('disabled', true)
+
+
+    }
+
+
+
+
+
+    function cargarFormEdit(value)
+    {
+        
+        //$("#ordenarNomb").val('')
+        $("#editData").show()
+        $("#deleteData").hide()
+
+        console.log("xd",value)
+        
+        $("#id_usuario_av").val(value.id_usuario)
+        $("#id_usuario_av").attr('placeholder', value.id_usuario) 
+        $("#id_usuario_av").attr('readonly', true)
+        
+        $("#usuario_av").val(value.usuario)
+        $("#usuario_av").attr('placeholder', value.usuario) 
+        $("#usuario_av").attr('readonly', false)
+        
+        $("#nombre_completo_av").val(value.nombre_completo)
+        $("#nombre_completo_av").attr('placeholder', value.nombre_completo) 
+        $("#nombre_completo_av").attr('readonly', false)
+        
+        $("#email_av").val(value.email)
+        $("#email_av").attr('placeholder', value.email) 
+        $("#email_av").attr('readonly', false)
+        
+        $("#religion_av").val(value.religion)
+        $("#religion_av").attr('placeholder', value.religion) 
+        $("#religion_av").attr('readonly', false)
+
+        $("#tipo_usuario_av").val(value.tipo_usuario)
+        $("#tipo_usuario_av").attr('placeholder', value.tipo_usuario) 
+        $("#tipo_usuario_av").attr('readonly', false)
+
+    }
+
+    function cargarFormEdit2(value)
+    {
+        
+        //$("#ordenarNomb").val('')
+        $("#editData2").show()
+
+        console.log("xd",value)
+        
+        $("#id_religion_e").val(value.id_religion)
+        $("#id_religion_e").attr('placeholder', value.id_religion) 
+        $("#id_religion_e").attr('readonly', true)
+        
+        $("#religion_e").val(value.religion)
+        $("#religion_e").attr('placeholder', value.religion) 
+        $("#religion_e").attr('disabled', true)
+        
+        $("#video_e").val(value.video)
+        $("#video_e").attr('placeholder', value.video) 
+        $("#video_e").attr('readonly', false)
+        
+        $("#descripcion_e").val(value.descripcion)
+        $("#descripcion_e").attr('placeholder', value.descripcion) 
+        $("#descripcion_e").attr('readonly', false)
+        
+        $("#mision_e").val(value.mision)
+        $("#mision_e").attr('placeholder', value.mision) 
+        $("#mision_e").attr('readonly', false)
+
+        $("#plan_e").val(value.plan)
+        $("#plan_e").attr('placeholder', value.plan) 
+        $("#plan_e").attr('readonly', false)
+
+        $("#vision_e").val(value.vision)
+        $("#vision_e").attr('placeholder', value.vision) 
+        $("#vision_e").attr('readonly', false)
+
+        
+
+    }
+
+
+
+    
+    function confirmEdit()
+    {
+    var editarDatos = $("#formAV").serializeArray();
+        //console.log("editarDatos: ", editarDatos)
+        $.ajax({
+        url: "BackendUsuarios_Edit.php",
+        type: "POST",
+        data: editarDatos,
+        success: function(r)
+        {
+            if (r == 1) 
+                {
+
+                alert("datos modificados con exito")
+                $("#ordenarNomb").val(nombreCompletoAV.value)
+                cargarTabla()
+                $("#modalAV").modal('hide')
+
+                }
+                else{ alert("error en la actualizacion de datos")}
+            }
+        })
+
+    }
+
+
+
+    function confirmEdit2()
+    {
+    var editarDatos = $("#formEV").serializeArray();
+        //console.log("editarDatos: ", editarDatos)
+        $.ajax({
+        url: "BackendReligiones_Edit.php",
+        type: "POST",
+        data: editarDatos,
+        success: function(r)
+        {
+            if (r == 1) 
+                {
+                alert("datos modificados con exito")
+                $("#ordenarNomb").val(nombreCompletoAV.value)
+                cargarTabla()
+                $("#modalAV").modal('hide')
+
+                }
+                else{ alert("error en la actualizacion de datos")}
+            }
+        })
+
+    }
+
+
+
+    function confirmDelete()
+    {
+        var eliminarDatos = $("#formAV").serializeArray();
+        //console.log("editarDatos: ", eliminarDatos)
+        $.ajax({
+        url: "BackendUsuarios_Delete.php",
+        type: "POST",
+        data: eliminarDatos,
+        success: function(r){
+            if (r == 1) 
+                {
+                
+                alert("datos Eliminados")
+                cargarTabla()
+                $("#modalAV").modal('hide')
+                
+                }
+            }
+        })
+    }
+
+
+    $("#editData").on("click", function(){confirmEdit()});
+    $("#editData2").on("click", function(){confirmEdit2()});
+    $("#deleteData").on("click", function(){confirmDelete()});

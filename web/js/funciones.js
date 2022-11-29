@@ -632,3 +632,9 @@
       $("#btn_siguiente").attr('disabled', false);
       $("#btn_finalizar").attr('disabled', false);
     })
+
+    $("#registrarse").click(function(){
+      $("#modal_is").modal("hide");
+      $("#modal_registrarse").modal("toggle");
+
+    })
