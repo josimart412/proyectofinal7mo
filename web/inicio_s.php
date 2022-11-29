@@ -25,7 +25,7 @@
             session_start();
             $_SESSION['usuario']=$u;
     
-            echo ('2');
+            echo ('1');
         }
            
     }

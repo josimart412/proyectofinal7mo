@@ -600,20 +600,15 @@
         ultimaseleccion=4
       }
 
-      if (cristianismo>hinduismo,astrologia,misticismo) {
-        religionseleccionada=1
-      }
-      else if (hinduismo>cristianismo,astrologia,misticismo) {
-        religionseleccionada=2
-      }
-      else if (astrologia>cristianismo,hinduismo,misticismo) {
-        religionseleccionada=3
-      }
-      else if (misticismo>cristianismo,hinduismo,astrologia) {
-        religionseleccionada=4
-      }
 
-      console.log (religionseleccionada[2])
+      var totreligion=[cristianismo, hinduismo, astrologia, misticismo];
+      var nomreligion=["cristianismo", "hinduismo", "astrologia", "misticismo"];
+      //var maximo=Math.max(totreligion);
+      var maximo=totreligion.reduce((a,b) => Math.max(a,b),-Infinity)
+      var indicemaximo=totreligion.indexOf(maximo)
+      var religionPOST=nomreligion[indicemaximo]
+      alert(religionPOST)
+
 
 
 
