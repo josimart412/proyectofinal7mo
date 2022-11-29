@@ -96,7 +96,7 @@
     var seleccion8
     var seleccion9
     var seleccion10
-    var religionseleccionada=[cristianismo, hinduismo, astrologia, misticismo]
+
     
 
 
@@ -318,111 +318,111 @@
 
       if (opcion==1) {
         $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 1");
+        $("#TituloForm").append("¿Hay un ser divino?");
         $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
+        $("#textoOp1").append("Hay un solo ser divino");
         $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
+        $("#textoOp2").append("Hay varios seres divinos");
         $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
+        $("#textoOp3").append("No, no hay un ser divino");
         $("#textoOp4").empty();
-        $("#textoOp4").append("1");
+        $("#textoOp4").append("Creo que hay algo, pero no se que");
       }
       else if (opcion==2){
         $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 2");
+        $("#TituloForm").append("¿Cual de estas frases se adapta mejor a tu vision del significado de la vida?");
         $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
+        $("#textoOp1").append("Accedé a la voluntad de un ser divino para que me conseda el paso al paraiso");
         $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
+        $("#textoOp2").append("Escapa del ciclo del renacimiento para convertirme en algo divino");
         $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
+        $("#textoOp3").append("Vivir segun las energias que tenga a mi alcance");
         $("#textoOp4").empty();
-        $("#textoOp4").append("2");
+        $("#textoOp4").append("Solo existe esta vida, hay que aprovecharla al maximo");
     }
     else if (opcion==3){
-        $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 3");
-        $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
-        $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
-        $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
-        $("#textoOp4").empty();
-        $("#textoOp4").append("3");
+      $("#TituloForm").empty();
+      $("#TituloForm").append("¿Que pasa despues de la muerte?");
+      $("#textoOp1").empty();
+      $("#textoOp1").append("Iras al cielo o al infierno");
+      $("#textoOp2").empty();
+      $("#textoOp2").append("Renaceras o iras al cielo");
+      $("#textoOp3").empty();
+      $("#textoOp3").append("Pasamos al plano astral");
+      $("#textoOp4").empty();
+      $("#textoOp4").append("Nuestro espiritu toma su propio rumbo segun como vivimos la vida");
     }
     else if (opcion==4){
-        $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 4");
-        $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
-        $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
-        $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
-        $("#textoOp4").empty();
-        $("#textoOp4").append("4");
+      $("#TituloForm").empty();
+      $("#TituloForm").append("¿Que rituales religiosos te atraen?");
+      $("#textoOp1").empty();
+      $("#textoOp1").append("Oracion y adoracion");
+      $("#textoOp2").empty();
+      $("#textoOp2").append("Meditacion");
+      $("#textoOp3").empty();
+      $("#textoOp3").append("Canalizar y seguir lo que me ordenan las energias que me rodean");
+      $("#textoOp4").empty();
+      $("#textoOp4").append("Rituales");
     }
     else if (opcion==5){
-        $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 5");
-        $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
-        $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
-        $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
-        $("#textoOp4").empty();
-        $("#textoOp4").append("5");
+      $("#TituloForm").empty();
+      $("#TituloForm").append("¿Cuantos textos sagrados debe tener una religion?");
+      $("#textoOp1").empty();
+      $("#textoOp1").append("Solo uno");
+      $("#textoOp2").empty();
+      $("#textoOp2").append("Varios");
+      $("#textoOp3").empty();
+      $("#textoOp3").append("Todo el canon cientifico");
+      $("#textoOp4").empty();
+      $("#textoOp4").append("Ninguno");
     }
     else if (opcion==6){
-        $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 6");
-        $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
-        $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
-        $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
-        $("#textoOp4").empty();
-        $("#textoOp4").append("6");
+      $("#TituloForm").empty();
+      $("#TituloForm").append("¿Que tan estricta debe ser una religion?");
+      $("#textoOp1").empty();
+      $("#textoOp1").append("Estricta al punto donde uno pueda soportarla");
+      $("#textoOp2").empty();
+      $("#textoOp2").append("Muy estricta, deberia dar mi vida por mi creencia");
+      $("#textoOp3").empty();
+      $("#textoOp3").append("Nada estricta, todos deberian poder elegir por si mismos");
+      $("#textoOp4").empty();
+      $("#textoOp4").append("No deberia ser estricta, pero voy a sufrir concecuencias por ello");
     }
     else if (opcion==7){
-        $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 7");
-        $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
-        $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
-        $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
-        $("#textoOp4").empty();
-        $("#textoOp4").append("7");
+      $("#TituloForm").empty();
+      $("#TituloForm").append("¿Como empezo todo?");
+      $("#textoOp1").empty();
+      $("#textoOp1").append("Dios creo todo");
+      $("#textoOp2").empty();
+      $("#textoOp2").append("Los dioses crearon todo");
+      $("#textoOp3").empty();
+      $("#textoOp3").append("Hubo un Big Bang");
+      $("#textoOp4").empty();
+      $("#textoOp4").append("El mundo siempre existio");
     }
     else if (opcion==8){
-        $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 8");
-        $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
-        $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
-        $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
-        $("#textoOp4").empty();
-        $("#textoOp4").append("8");
+      $("#TituloForm").empty();
+      $("#TituloForm").append("¿Crees que existen encarnaciones humanas de un ser o seres divinos?");
+      $("#textoOp1").empty();
+      $("#textoOp1").append("Una encarnacion");
+      $("#textoOp2").empty();
+      $("#textoOp2").append("Varias encarnaciones");
+      $("#textoOp3").empty();
+      $("#textoOp3").append("No hay encarnaciones humanas");
+      $("#textoOp4").empty();
+      $("#textoOp4").append("No, no creo en seres divinos pero si en seres oscuros");
     }
     else if (opcion==9){
-        $("#TituloForm").empty();
-        $("#TituloForm").append("Agregar respuesta 9");
-        $("#textoOp1").empty();
-        $("#textoOp1").append("estas");
-        $("#textoOp2").empty();
-        $("#textoOp2").append("en la");
-        $("#textoOp3").empty();
-        $("#textoOp3").append("opcion");
-        $("#textoOp4").empty();
-        $("#textoOp4").append("9");
+      $("#TituloForm").empty();
+      $("#TituloForm").append("¿Por que hay maldad y sufrimiento en este mundo?");
+      $("#textoOp1").empty();
+      $("#textoOp1").append("Los humanos heredaron la pecaminosidad y nos apartamos del camino");
+      $("#textoOp2").empty();
+      $("#textoOp2").append("Por que somos seres con errores");
+      $("#textoOp3").empty();
+      $("#textoOp3").append("Por que tenemos energias malas");
+      $("#textoOp4").empty();
+      $("#textoOp4").append("Por que tenemos libre albedrio y muchas tentaciones");
     }
 
     //funcion para quitar puntaje a religion determinada (siguiendo en funciones relacionadas al boton anterior)
@@ -581,22 +581,22 @@
     $("#btn_finalizar").click(function(){
       if ($("#op1").is(':checked')) {
         cristianismo++
-        alert ("cristiano:"+cristianismo+" hinduismo:"+hinduismo+" astrologia:"+astrologia+" misticismo: "+misticismo)
+        
         ultimaseleccion=1
       }
       else if ($("#op2").is(':checked')) {
         hinduismo++
-        alert ("cristiano:"+cristianismo+" hinduismo:"+hinduismo+" astrologia:"+astrologia+" misticismo: "+misticismo)
+        
         ultimaseleccion=2
       }
       else if ($("#op3").is(':checked')) {
         astrologia++
-        alert ("cristiano:"+cristianismo+" hinduismo:"+hinduismo+" astrologia:"+astrologia+" misticismo: "+misticismo)
+        
         ultimaseleccion=3
       }
       else if ($("#op4").is(':checked')) {
         misticismo++
-        alert ("cristiano:"+cristianismo+" hinduismo:"+hinduismo+" astrologia:"+astrologia+" misticismo: "+misticismo)
+        
         ultimaseleccion=4
       }
 
@@ -607,9 +607,8 @@
       var maximo=totreligion.reduce((a,b) => Math.max(a,b),-Infinity)
       var indicemaximo=totreligion.indexOf(maximo)
       var religionPOST=nomreligion[indicemaximo]
-      alert(religionPOST)
-
-
+      alert("La religion que recomendamos para ti es "+religionPOST)
+      
 
 
     })
