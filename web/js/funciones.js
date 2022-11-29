@@ -632,6 +632,3 @@
       $("#btn_siguiente").attr('disabled', false);
       $("#btn_finalizar").attr('disabled', false);
     })
-
-
-

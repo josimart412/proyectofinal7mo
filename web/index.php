@@ -209,27 +209,52 @@ else
 
 
 
-
-
-
         <!-- ======= ADMIN Section ======= -->
-        <section id="admin" class="about">
-        <div class="container" data-aos="fade-up">
-        <div class="row">
+        <section id="admin-panel" class="about-boxes">
+      <div class="container" data-aos="fade-up">
 
-          <div class="col-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-            <a id="video" href="youtube.com" class="glightbox play-btn mb-4"></a>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="assets/img/religiones.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Gestionar religiones</a></h5>
+                <button style="width:100% " id="btn_gestion_religiones" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal_gestion_religiones">
+                  Gestionar
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 pt-3 pt-lg-0 content">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_mensaje">
-              Mensaje diario
-            </button>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <img src="assets/img/libro.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title"><a>Cargar mensaje diario</a></h5>
+                <button style="width:100% " type="button" class="btn btn-danger" data-toggle="modal" id="btn_modal_mensaje" data-target="#modal_mensaje">
+                  Cargar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img src="assets/img/usuarios.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Gestionar usuarios</a></h5>
+                <button style="width:100% " id="btn_gestion_usuarios" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal_gestion_usuarios">
+                  Gestionar
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
-    </section><!-- End ADMIN Section -->
+    </section><!-- end ADMIN Section -->
+
+
+
+
 
 
 
@@ -494,41 +519,178 @@ else
 
 </html>
 
+  <!-- MODAL RELIGIONES -->
+
+
+  <div class="modal fade" id="modal_gestion_religiones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Gestor de religiones</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body" style="overflow-x: auto ;">
+                <div class="col">   
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class='tablaReligiones'>ID Religion</th>
+                                <th class='tablaReligiones'>Religion</th>
+                                <th class='tablaReligiones'>Descripcion</th>
+                                <th class='tablaReligiones'>Mision</th>
+                                <th class='tablaReligiones'>Plan</th>
+                                <th class='tablaReligiones'>Vision</th>
+                                <th class='tablaReligiones'>Video</th>
+                                <th class='tablaReligiones'>Editar</th>
+                                <th class='tablaReligiones'>Borrar</th>
+                            </tr>
+                        </thead>
+                        <tbody  id="tablaReligiones">
+                           
+                        </tbody>
+                    </table>    
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cerrar_modal_religiones">Cerrar</button>
+            </div>
+          </div>
+        </div>
+    </div>
 
 
 
-  <!-- Modal mensaje diario -->
-  <div class="modal fade" id="modal_mensaje" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-  <div class="modal-content">
-      <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Agregar mensaje diario</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-          <div class="container">
-  <!--Formulario mensaje diario-->
+
+
+
+   <!-- MODAL USUARIOS -->
+
+
+   <div class="modal fade" id="modal_gestion_usuarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Usuarios</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="col-2">
+                <select class="form-control altura" id="letraUsuarios" value="t" placeholder="ordenar por">
+                    <option class="form-control altura" value="t">Seleccione</option>
+                    <option class="form-control altura" value="t">Todos</option>
+                    <option class="form-control altura" value="a">Administradores</option>
+                    <option class="form-control altura" value="u">Usuarios</option>
+                </select>
+            </div>
+            <div class="modal-body" style="overflow-x: auto ;">
+                <div class="col">   
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class='tablaUsuarios'>ID usuario</th>
+                                <th class='tablaUsuarios'>Usuario</th>
+                                <th class='tablaUsuarios'>Tipo</th>
+                                <th class='tablaUsuarios'>Nombre</th>
+                                <th class='tablaUsuarios'>Religion</th>
+                                <th class='tablaUsuarios'>Email</th>
+                                <th class='tablaUsuarios'>Editar</th>
+                                <th class='tablaUsuarios'>Borrar</th>
+                            </tr>
+                        </thead>
+                        <tbody  id="tablaUsuarios">
+                           
+                        </tbody>
+                    </table>    
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+       <!-- MODAL MENSAJE DIARIO -->
+
+
+   <div class="modal fade" id="modal_mensaje" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cargar mensaje diario</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body" style="overflow-x: auto ;">
+                <div class="col">   
+                      <!--Formulario mensaje diario-->
     <div class="container">
         <div class="row">
-
-    <form class="row g-3" method="POST" action="validacionPOST.php" id="formulario_modal">
-        <div class="col-12 position-relative">
-        <label for="validationTooltip01" class="form-label"><img src="img/sliders.svg" style="height: 20px; width: 20px;">  religion</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Seleccionar una religion</option>
-          <option value="1">Cristianismo</option>
-          <option value="2">Hinduismo</option>
-          <option value="3">Astrologia</option>
-          <option value="4">Misticismo</option>
-        </select>
-        </div>
-        <div class="col-12 position-relative">
-            <label for="validationTooltip01" class="form-label"><img src="img/align-justify.svg" style="height: 20px; width: 20px;">  Mensaje</label>
-            <input type="text" class="form-control" value="" id="mensaje_diario_form">
-        </div>
-                        </form>
-                    </div>
+                  <form class="row g-3" method="POST" action="validacionPOST.php" id="formMensaje">
+                      <div class="col-12 position-relative">
+                      <label for="validationTooltip01" class="form-label"><img src="img/sliders.svg" style="height: 20px; width: 20px;">  religion</label>
+                      <select class="form-select" aria-label="Default select example" id="id_mensaje_diario_form" name="id_mensaje_diario_form">
+                        <option selected>Seleccionar una religion</option>
+                        <option value="1">Cristianismo</option>
+                        <option value="2">Hinduismo</option>
+                        <option value="3">Astrologia</option>
+                        <option value="4">Misticismo</option>
+                      </select>
+                      </div>
+                      <div class="col-12 position-relative">
+                          <label for="validationTooltip01" class="form-label"><img src="img/align-justify.svg" style="height: 20px; width: 20px;">  Mensaje</label>
+                          <input type="text" class="form-control" value="" id="mensaje_diario_form" name="mensaje_diario_form">
+                      </div>
+                  </form> 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" id="cancelar_form_mensaje" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" id="enviar_form_mensaje" data-bs-dismiss="modal" class="btn btn-dark">Enviar</button>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-secondary" id="addDataMensaje" data-dismiss="modal">Enviar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/funcionesintranet.js"></script>
+
+
+
+
+    <style>
+.xd
+{
+    text-align: center;
+}
+
+.iconsize
+{
+    height: 30px;
+    width: 30px;
+}
+
+.altura
+{
+    height: 40px;
+}
+
+
+</style>

@@ -5,5 +5,5 @@ session_start();
 //destruyo la session
 session_destroy();
 //volvemos al inicio 
-header("location:index2.html");
+header("location:index.html");
 ?>
