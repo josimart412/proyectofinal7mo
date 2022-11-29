@@ -638,3 +638,29 @@
       $("#modal_registrarse").modal("toggle");
 
     })
+
+
+
+    //registro de usuarios
+
+    $("#addData").click(function(){
+      var datos = $('#formAdd').serializeArray();
+      //console.log("datos:",datos)
+          $.ajax({
+              type:"POST",
+              url:"Registrarse.php",
+              data: datos,
+              success:function(r){
+                  if(r == 1)
+                  {
+                      alert("agregado con exito");
+                      $("#ordenarNomb").val(nombreCompleto.value)
+                      cargarTabla();
+                      $("#myModal").modal('hide')
+                  }else
+                  {
+                      alert("Verifique que los campos sean correctos");
+                  }
+              }
+          })
+      })
